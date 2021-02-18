@@ -1,0 +1,20 @@
+<!--components/NavBar/navBar.wxml-->
+
+<!-- 整体导航栏 -->
+<view class="navBar" style="{{NavBarStyle}}">
+    <!-- 去除状态栏后的内容区 -->
+    <view class="navBar_content" style="{{navBarContentStyle}}">
+        <!-- 内容区包裹 -->
+        <view class="content_inner_wrapper">
+            <!-- 返回Icon -->
+            <view wx:if="{{hasBack}}" class="NavBarBack" style="color: {{color}};" bindtap="goBack">
+                <text class="iconfont icon-icon-test"></text>
+            </view>
+            <!-- 标题 -->
+            <view class="NavBarTitle" style="color: {{color}};">{{title}}</view>
+        </view>
+    </view>
+</view>
+
+<!-- 导航栏占位 -->
+<view wx:if="{{occupied}}" style="height:{{NavBarH}}px;"></view>

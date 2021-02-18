@@ -1,0 +1,106 @@
+/* components/drawer/drawer.wxss */
+
+@import "../../style/icon.wxss";
+
+.page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+    display: none;
+} */
+
+.windowPage {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    transition: all 0.4s;
+}
+
+.windowPage.show {
+    transform: scale(0.9, 0.9);
+    left: 85vw;
+    box-shadow: 0 0 60rpx rgba(0, 0, 0, 0.2);
+    transform-origin: 0;
+}
+
+.innerSwiper {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.scrollView {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.drawerBtn {
+    margin: 30rpx auto;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: -15vw;
+    height: 100vh;
+    width: 15vw;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.6));
+    opacity: 0;
+    transition: opacity 0.4s, right 0s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30rpx;
+    box-sizing: border-box;
+}
+
+.mask.show {
+    opacity: 1;
+    right: 0;
+}
+
+.icon-jiantouarrow476 {
+    color: #fff;
+    font-size: 50rpx;
+}
+
+.drawerPage {
+    position: absolute;
+    width: 85vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transform: scale(0.9, 0.9) translateX(-100%);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.drawerPage.show {
+    transform: scale(1, 1) translateX(0%);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.list {
+    width: 80%;
+    border-radius: 20rpx;
+    margin: 0 auto;
+}
+
+.listItem {
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+<!--pages/product/product.wxml-->
+<!-- 导航栏组件 -->
+<NavBar 
+    color="#000"
+    bgImg="url('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3483962841,2497527881&fm=26&gp=0.jpg')"
+    bgPosition="center 90%"
+></NavBar>
+<!-- https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1173792085,983312938&fm=26&gp=0.jpg -->
+<!-- https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2471723616,1604025636&fm=26&gp=0.jpg -->
+<!-- https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170407%2Fd3c43fe6e9e74e169fb2d83de249b73d_th.gif&refer=http%3A%2F%2Fimg.mp.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614339552&t=5a9e81160e675ea2b7bc2b9cee60ebe9 -->
+<!-- https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1273398224,1448221012&fm=26&gp=0.jpg -->
+<!-- https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3483962841,2497527881&fm=26&gp=0.jpg -->
+
+<view class="list">
+    <view class="item" wx:for="{{3}}" wx:key="index">
+        <image class="itemImg" mode="aspectFill" src="../../images/5.jpg"></image>
+    </view>
+    
+    <view style="width: 45%"></view>
+</view>

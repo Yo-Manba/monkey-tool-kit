@@ -1,0 +1,50 @@
+{
+    "pages": [
+		"pages/index/index",
+		"pages/product/product",
+		"pages/mine/mine"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"color": "#343338",
+		"selectedColor": "#343338",
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/images/tabImg/index.png",
+				"selectedIconPath": "/images/tabImg/index1.png"
+			},
+			{
+				"pagePath": "pages/product/product",
+				"text": "工具箱",
+				"iconPath": "/images/tabImg/information.png",
+				"selectedIconPath": "/images/tabImg/information1.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "/images/tabImg/mine.png",
+				"selectedIconPath": "/images/tabImg/mine1.png"
+			}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "您的位置信息将用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"NavBar": "/components/NavBar/NavBar",
+		"Drawer": "/components/Drawer/Drawer"
+	},
+    "sitemapLocation": "sitemap.json",
+	"style": "v2"
+}

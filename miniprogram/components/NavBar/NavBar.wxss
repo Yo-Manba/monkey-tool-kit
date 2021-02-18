@@ -1,0 +1,50 @@
+/* components/NavBar/navBar.wxss */
+@import "../../style/icon.wxss";
+
+.navBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    background-size: 100%;
+    box-shadow: 0 0 10rpx #666;
+    /* background-position: center center; */
+    /* background-position: 100% 100%; */
+}
+
+.navBar_content {
+    box-sizing: border-box;
+}
+
+.content_inner_wrapper {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+}
+
+.NavBarBack {
+    height: 100%;
+    padding: 0 30rpx 0 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.icon-icon-test{
+	font-size: 26px;
+}
+
+.NavBarTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	max-width: 46%;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}

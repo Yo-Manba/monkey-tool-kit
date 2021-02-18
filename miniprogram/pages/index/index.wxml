@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<!-- 导航栏组件 -->
+<NavBar 
+    color="#000"
+    bgImg="url('https://7465-test-9g4ddq37aa3cd20e-1304869514.tcb.qcloud.la/navbarImg/8.jpg?sign=009966c227421e1e920d2489266a5b36&t=1611746704')"
+></NavBar>

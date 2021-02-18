@@ -1,0 +1,30 @@
+<!--components/drawer/drawer.wxml-->
+
+<view class=".page" style="	background-color: {{pageBgColor}}; background-image: {{pageBgImg}};"></view>
+
+<view class="windowPage {{showDrawer ? 'show' : '' }}" style="background-color: {{mainPageBgColor}}">
+    <NavBar title="{{navTitle}}" hasBack="{{navBack}}" color="{{navColor}}" bgColor="{{navBgColor}}" bgImg="{{navBgImg}}" position="relative"></NavBar>
+    <swiper class="scrollView" style="height: calc(100% - {{NavBarH}}px);" vertical>
+        <swiper-item>
+            <scroll-view scroll-y class="scrollView">
+				<slot name="mainPage" />
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<view class="mask {{showDrawer ? 'show' : ''}}" bindtap="closeDrawer">
+    <text class="iconfont icon-jiantouarrow476"></text>
+</view>
+
+<swiper class="drawerPage {{showDrawer ? 'show' : ''}} innerSwiper" vertical>
+    <swiper-item>
+        <scroll-view scroll-y class="scrollView">
+            <view style="height: 50rpx;"></view>
+            <view class="list" style="width: {{drawerPageWidth}}%; background-color: {{drawerPageBgColor}};">
+				<slot name="drawerPage" />
+            </view>
+            <view style="height: 50rpx;"></view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
