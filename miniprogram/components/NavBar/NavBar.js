@@ -55,23 +55,26 @@ Component({
 	 * 组件的初始数据
 	 */
 	data: {
-		StatusBarH: app.globalData.StatusBarH,
-		NavBarH: app.globalData.NavBarH,
+		statusBarHeight: app.globalData.statusBarHeight,
+		NavBarHeight: app.globalData.NavBarHeight,
 		MenuButtonPos: app.globalData.MenuButtonPos,
 		NavBarStyle: `
-			height: ${app.globalData.NavBarH}px; 
+			height: ${app.globalData.NavBarHeight}rpx; 
 			background-color: #fff; 
 			background-image: ; 
 			background-position: center center;
 		`,
 		navBarContentStyle: `
-			height: ${app.globalData.NavBarH}px;
-			padding-top: ${app.globalData.StatusBarH}px;
+			height: ${app.globalData.NavBarHeight}rpx;
+			padding-top: ${app.globalData.statusBarHeight}rpx;
 		`
 	},
 
 	// 在组件实例进入页面节点树时执行
 	attached() {
+		// console.log(this.data.statusBarHeight)
+		// console.log(this.data.NavBarHeight)
+		// console.log(this.data.MenuButtonPos)
 		this.setData({
 			NavBarStyle: `
 				background-color: ${this.data.bgColor}; 

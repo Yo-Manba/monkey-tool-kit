@@ -17,4 +17,4 @@
 </view>
 
 <!-- 导航栏占位 -->
-<view wx:if="{{occupied}}" style="height:{{NavBarH}}px;"></view>
+<view wx:if="{{occupied}}" style="height:{{NavBarHeight}}rpx;"></view>

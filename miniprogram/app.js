@@ -16,14 +16,25 @@ App({
 
         wx.getSystemInfo({
             success: res => {
-                console.log(res)
-                this.globalData.StatusBarH = res.statusBarHeight;
+                // console.log(res)
+                // 获取该设备的rpx与px的比例
+                const ratio = 750 / res.windowWidth;
+                // 状态栏高度，单位rpx
+                this.globalData.statusBarHeight = res.statusBarHeight * ratio;
+                // 获取胶囊按钮的位置信息
                 let menuButtonPos = wx.getMenuButtonBoundingClientRect();
-                if (menuButtonPos) {
-                    this.globalData.MenuButtonPos = menuButtonPos;
-                    this.globalData.NavBarH = menuButtonPos.top - res.statusBarHeight + menuButtonPos.bottom;
+                // 全局储存胶囊按钮位置信息
+                this.globalData.MenuButtonPos = menuButtonPos;
+                /**
+                 * 当小程序进入小窗模式时，以小米手机为例，此时状态栏高度为零，小程序获取胶囊位置信息大概率会出错，
+                 * 导致最终呈现的导航栏高度异常，暂时区分写法，小窗模式时固定导航栏为40
+                 */
+                if (this.globalData.statusBarHeight === 0) {
+                    // 计算导航栏高度，单位rpx
+                    this.globalData.NavBarHeight = 40 * ratio;
                 } else {
-                    this.globalData.NavBarH = res.statusBarHeight + 50;
+                    // 计算导航栏高度，单位rpx
+                    this.globalData.NavBarHeight = (menuButtonPos.top - res.statusBarHeight + menuButtonPos.bottom) * ratio;
                 }
             }
         })
