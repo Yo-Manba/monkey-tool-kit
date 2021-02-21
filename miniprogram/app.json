@@ -2,7 +2,8 @@
     "pages": [
 		"pages/index/index",
 		"pages/product/product",
-		"pages/mine/mine"
+		"pages/mine/mine",
+		"pages/barrage/barrage"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

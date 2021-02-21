@@ -12,7 +12,8 @@
 <!-- https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3483962841,2497527881&fm=26&gp=0.jpg -->
 
 <view class="list">
-    <view class="item" wx:for="{{3}}" wx:key="index">
+    <!-- 手持弹幕 -->
+    <view class="item" bindtap="toBarrageModule">
         <image class="itemImg" mode="aspectFill" src="../../images/5.jpg"></image>
     </view>
     

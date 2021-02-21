@@ -16,6 +16,7 @@ App({
 
         wx.getSystemInfo({
             success: res => {
+                console.log(res)
                 this.globalData.StatusBarH = res.statusBarHeight;
                 let menuButtonPos = wx.getMenuButtonBoundingClientRect();
                 if (menuButtonPos) {

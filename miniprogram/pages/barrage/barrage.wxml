@@ -1,0 +1,9 @@
+<!--pages/barrage/barrage.wxml-->
+<!-- 导航栏组件 -->
+<NavBar 
+    hasBack="{{true}}"
+    title="手持弹幕"
+    color="#000"
+    bgImg=""
+    bgPosition="center 90%"
+></NavBar>

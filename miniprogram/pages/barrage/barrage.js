@@ -1,4 +1,4 @@
-// pages/product/product.js
+// pages/barrage/barrage.js
 Page({
 
     /**
@@ -13,13 +13,6 @@ Page({
      */
     onLoad: function (options) {
 
-    },
-
-    // 手持弹幕
-    toBarrageModule() {
-        wx.navigateTo({
-          url: '/pages/barrage/barrage',
-        })
     },
 
     /**
