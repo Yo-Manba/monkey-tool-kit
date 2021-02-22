@@ -3,7 +3,7 @@
 <NavBar 
     color="#000"
     bgImg="url('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3483962841,2497527881&fm=26&gp=0.jpg')"
-    bgPosition="center 90%"
+    bgPosition="center 88%"
 ></NavBar>
 <!-- https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1173792085,983312938&fm=26&gp=0.jpg -->
 <!-- https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2471723616,1604025636&fm=26&gp=0.jpg -->
@@ -16,12 +16,15 @@
     <view class="item" bindtap="toBarrageModule">
         <image class="itemImg" mode="aspectFill" src="../../images/5.jpg"></image>
     </view>
-    
+
     <view style="width: 45%"></view>
 </view>
 
-<view class="wave">
-    <view class="wave1"></view>
-    <view class="wave2"></view>
-    <view class="wave3"></view>
+
+<view class="canvasWrapper">
+    <canvas 
+        id="waveCanvas" 
+        width="300" 
+        height="300"
+    ></canvas>
 </view>
