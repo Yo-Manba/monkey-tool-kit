@@ -19,3 +19,9 @@
     
     <view style="width: 45%"></view>
 </view>
+
+<view class="wave">
+    <view class="wave1"></view>
+    <view class="wave2"></view>
+    <view class="wave3"></view>
+</view>
