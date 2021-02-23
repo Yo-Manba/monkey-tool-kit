@@ -40,9 +40,9 @@ Page({
 		this.ctx.setFillStyle('#58c9fd')
 		this.ctx.fillRect(0, 70, this.data.windowWidth, 400)
 
-		for (let i = 1; i < 10; i += 2) {
+		for (let i = 0; i < 10; i++) {
 			this.ctx.beginPath()
-			this.ctx.moveTo(x + (i - 1) * 320, 70)
+			this.ctx.moveTo(x + i * 320, 70)
 			this.ctx.quadraticCurveTo(x + (i + 1) * 80, 60, x + i * 320 + 160, 70)
 			this.ctx.setFillStyle('#58c9fd')
 			this.ctx.fill()
