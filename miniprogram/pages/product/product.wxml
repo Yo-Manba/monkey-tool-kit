@@ -20,11 +20,6 @@
     <view style="width: 45%"></view>
 </view>
 
-
 <view class="canvasWrapper">
-    <canvas 
-        id="waveCanvas" 
-        width="300" 
-        height="300"
-    ></canvas>
+    <canvas canvas-id="waveCanvas" class="waveCanvas"></canvas>
 </view>
