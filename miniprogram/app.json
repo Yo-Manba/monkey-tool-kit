@@ -44,7 +44,8 @@
 	},
 	"usingComponents": {
 		"NavBar": "/components/NavBar/NavBar",
-		"Drawer": "/components/Drawer/Drawer"
+		"Drawer": "/components/Drawer/Drawer",
+		"Wave": "/components/Wave/Wave"
 	},
     "sitemapLocation": "sitemap.json",
 	"style": "v2"

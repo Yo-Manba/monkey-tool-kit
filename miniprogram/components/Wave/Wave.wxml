@@ -1,0 +1,2 @@
+<!--components/Wave.wxml-->
+<canvas canvas-id="waveCanvas" class="waveCanvas"></canvas>
