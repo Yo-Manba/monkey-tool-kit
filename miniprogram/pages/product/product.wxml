@@ -21,5 +21,6 @@
 </view>
 
 <view class="canvasWrapper">
+    <image src="../../images/5.jpg" alt="" />
     <canvas canvas-id="waveCanvas" class="waveCanvas"></canvas>
 </view>

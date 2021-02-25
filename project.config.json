@@ -39,7 +39,7 @@
     },
     "appid": "wx6cfbc54a0f9d670d",
     "projectname": "%E7%8C%B4%E5%AD%90%E5%B7%A5%E5%85%B7%E7%AE%B1",
-    "libVersion": "2.14.1",
+    "libVersion": "2.15.0",
     "condition": {
         "plugin": {
             "list": []

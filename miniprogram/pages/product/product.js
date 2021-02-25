@@ -7,78 +7,71 @@ Page({
 	data: {
 		windowWidth: 0, // 屏幕宽度
 		ctx: '', // canvas实例对象
-		x: 0,
+		offsetX: 0, // canvas波浪图向左偏移的量
+		interval: null, // 定时器
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+		// 获取设备信息
 		wx.getSystemInfo({
 			success: (res) => {
 				console.log(res)
 				this.data.windowWidth = res.windowWidth;
-				this.canvasInit();
 			},
-		})
+		});
+		// 初始化canvas画布
+		this.canvasInit();
 	},
 
+	// 初始化canvas画布
 	canvasInit() {
 		this.ctx = wx.createCanvasContext('waveCanvas');
+	},
 
-		setInterval(() => {
-			this.data.x = this.data.x -= 4
-			if (this.data.x <= -320) {
-				this.data.x = 0
+	// 执行定时器
+	runInterval() {
+		this.data.interval = setInterval(() => {
+			this.data.offsetX = this.data.offsetX -= 4
+			if (this.data.offsetX <= -320) {
+				this.data.offsetX = 0
 			}
-			this.runWave(this.data.x)
+			// 执行绘制
+			this.runWave(this.data.offsetX)
 		}, 50)
 	},
 
-	runWave(x) {
-		console.log(x)
-		this.ctx.setFillStyle('#58c9fd')
-		this.ctx.fillRect(0, 70, this.data.windowWidth, 400)
-
-		for (let i = 0; i < 10; i++) {
-			this.ctx.beginPath()
-			this.ctx.moveTo(x + i * 320, 70)
-			this.ctx.quadraticCurveTo(x + (i + 1) * 80, 60, x + i * 320 + 160, 70)
-			this.ctx.setFillStyle('#58c9fd')
-			this.ctx.fill()
+	// 执行绘制
+	runWave(offsetX) {
+		console.log(offsetX)
+	
+		// 绘制上波浪
+		// this.ctx.setGlobalAlpha(0.1)
+		for (let i = 0; i < 5; i++) {
+			this.ctx.moveTo(offsetX + i * 320, 70)
+			this.ctx.quadraticCurveTo(offsetX + i * 320 + 80, 60, offsetX + i * 320 + 160, 70)
+			// this.ctx.strokeStyle = '#58c9fd'
+			// this.ctx.stroke()
 		}
 
-		// for (let i = 2; i < 10; i += 2) {
-		// 	this.ctx.beginPath()
-		// 	this.ctx.moveTo(x + (i * 2 + 1) * 160, 70)
-		// 	this.ctx.quadraticCurveTo(x + (i * 3 + 4) * 80, 80, x + 320, 70)
-		// 	this.ctx.setFillStyle('#fff')
-		// 	this.ctx.fill()
-		// }
+		// 绘制下波浪
+		// this.ctx.setGlobalAlpha(0.1)
+		for (let i = 0; i < 5; i++) {
+			this.ctx.moveTo(offsetX + i * 320 + 160, 70)
+			this.ctx.quadraticCurveTo(offsetX + i * 320 + 240, 80, offsetX + i * 320 + 320, 70)
+			// this.ctx.strokeStyle = '#000'
+			// this.ctx.stroke()
+		}
 
-		// this.ctx.beginPath()
-		// this.ctx.moveTo(x + 320, 70)
-		// this.ctx.quadraticCurveTo(x + 400, 60, x + 480, 70)
-		// this.ctx.setFillStyle('#58c9fd')
-		// this.ctx.fill()
-
-		// this.ctx.beginPath()
-		// this.ctx.moveTo(x + 480, 70)
-		// this.ctx.quadraticCurveTo(x + 560, 80, x + 640, 70)
-		// this.ctx.setFillStyle('#fff')
-		// this.ctx.fill()
-
-		// this.ctx.beginPath()
-		// this.ctx.moveTo(x + 640, 70)
-		// this.ctx.quadraticCurveTo(x + 720, 60, x + 800, 70)
-		// this.ctx.setFillStyle('#58c9fd')
-		// this.ctx.fill()
-
-		// this.ctx.beginPath()
-		// this.ctx.moveTo(x + 800, 70)
-		// this.ctx.quadraticCurveTo(x + 880, 80, x + 960, 70)
-		// this.ctx.setFillStyle('#fff')
-		// this.ctx.fill()
+		// 绘制矩形封闭
+		this.ctx.lineTo(this.data.windowWidth, 300)
+		this.ctx.lineTo(0, 300)
+		this.ctx.lineTo(0, 70)
+		this.ctx.setGlobalAlpha(0.3)
+		this.ctx.fillStyle = "#58c9fd"
+		this.ctx.fill()
 
 		this.ctx.draw()
 	},
@@ -101,14 +94,16 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		// 执行定时器
+		this.runInterval();
 	},
 
 	/**
 	 * 生命周期函数--监听页面隐藏
 	 */
 	onHide: function () {
-
+		// 清除定时器
+		clearInterval(this.data.interval)
 	},
 
 	/**
