@@ -1,6 +1,11 @@
 <!--pages/mine/mine.wxml-->
 <!-- 导航栏组件 -->
-<NavBar 
+<!-- <NavBar 
     color="#000"
     bgImg="url('https://7465-test-9g4ddq37aa3cd20e-1304869514.tcb.qcloud.la/navbarImg/6.jpg?sign=028efc404985e8e76d20f8c20b803f7a&t=1611746265')"
-></NavBar>
+></NavBar> -->
+
+<view class="wrapper">
+    <image class="bgImg" src="https://7465-test-9g4ddq37aa3cd20e-1304869514.tcb.qcloud.la/navbarImg/6.jpg?sign=028efc404985e8e76d20f8c20b803f7a&t=1611746265"></image>
+    <Wave />
+</view>

@@ -20,8 +20,7 @@
     <view style="width: 45%"></view>
 </view>
 
-<view class="canvasWrapper">
+<!-- <view class="canvasWrapper">
     <image class="bgImg" src="../../images/5.jpg" alt="" />
     <Wave />
-    <!-- <canvas canvas-id="waveCanvas" class="waveCanvas"></canvas> -->
-</view>
+</view> -->

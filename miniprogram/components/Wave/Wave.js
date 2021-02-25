@@ -56,7 +56,7 @@ Component({
     methods: {
         // 初始化canvas画布
         canvasInit() {
-            this.ctx = wx.createCanvasContext('waveCanvas');
+            this.ctx = wx.createCanvasContext('waveCanvas', this);
         },
 
         // 执行定时器
@@ -162,6 +162,5 @@ Component({
         },
 
     },
-
 
 })
