@@ -14,6 +14,7 @@
 <view class="list">
     <!-- 手持弹幕 -->
     <view class="item" bindtap="toBarrageModule">
+        <canvas canvas-id="cardCanvas" class="cardCanvas"></canvas>
         <image class="itemImg" mode="aspectFill" src="../../images/5.jpg"></image>
     </view>
 

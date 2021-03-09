@@ -12,7 +12,15 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		
+		this.ctx = wx.createCanvasContext('cardCanvas');	
+		this.ctx.beginPath();
+		this.ctx.moveTo(0, 45);
+		this.ctx.quadraticCurveTo(50, 20, 100, 45);
+		// this.ctx.strokeStyle = "#000"
+		this.ctx.setStrokeStyle('yellow')
+		this.ctx.stroke()
+		this.ctx.draw()
+
 	},
 
 	// 手持弹幕

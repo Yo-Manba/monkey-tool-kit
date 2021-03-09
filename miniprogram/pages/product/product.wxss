@@ -14,11 +14,21 @@
     border-radius: 20rpx;
     overflow: hidden;
     box-shadow: 0 0rpx 30rpx rgb(189, 186, 186);
+    position: relative;
 }
 
 .itemImg{
     width: 100%;
     height: 100%;
+    z-index: 66;
+}
+
+.cardCanvas{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 
